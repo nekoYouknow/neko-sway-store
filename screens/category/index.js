@@ -1,11 +1,24 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, ScrollView } from "react-native";
+
+import Header from "./header";
+import Banner from "./banner";
+
+import TopWear from "./topWear";
+import BottomWear from "./bottomWear";
+import FootWear from "./footWear";
 
 export default function Category() {
   return (
-    <View>
-      <Text>Category</Text>
-      <Text>Man</Text>
+    <View style={styles.container}>
+      <Header />
+
+      <ScrollView>
+        <Banner />
+        <TopWear />
+        <BottomWear />
+        <FootWear />
+      </ScrollView>
     </View>
   );
 }
@@ -13,6 +26,7 @@ export default function Category() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "yellow"
+    marginTop: 24
+    // marginHorizontal: 24
   }
 });

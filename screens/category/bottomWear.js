@@ -3,22 +3,21 @@ import {
   StyleSheet,
   View,
   Text,
-  ImageBackground,
   ScrollView,
-  TouchableOpacity
+  TouchableOpacity,
+  ImageBackground
 } from "react-native";
 
-export default function WhatsNew(props) {
+export default function BottomWear() {
   const [list, setList] = useState([
-    { id: 1, title: "Woman", source: require("../../assets/home-1.png") },
-    { id: 2, title: "Man", source: require("../../assets/home-2.png") },
-    { id: 3, title: "Girl", source: require("../../assets/home-3.png") },
-    { id: 4, title: "Boy", source: require("../../assets/home-1.png") },
-    { id: 5, title: "Unisex", source: require("../../assets/home-2.png") }
+    { id: 1, title: "Trousers", source: require("../../assets/home-1.png") },
+    { id: 2, title: "Shorts", source: require("../../assets/home-1.png") },
+    { id: 3, title: "Denim", source: require("../../assets/home-1.png") }
   ]);
+
   return (
     <View style={styles.container}>
-      {/* header */}
+      {/* head */}
       <View
         style={{
           flexDirection: "row",
@@ -27,11 +26,11 @@ export default function WhatsNew(props) {
         }}
       >
         <View style={{ flex: 1 }}>
-          <Text>What's new</Text>
+          <Text>Topwear</Text>
         </View>
         <View>
           <TouchableOpacity>
-            <Text>View All</Text>
+            <Text>View all</Text>
           </TouchableOpacity>
         </View>
       </View>
