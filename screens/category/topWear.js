@@ -10,9 +10,9 @@ import {
 
 export default function TopWear() {
   const [list, setList] = useState([
-    { id: 1, title: "Suits", source: require("../../assets/home-2.png") },
-    { id: 2, title: "Shirts", source: require("../../assets/home-2.png") },
-    { id: 3, title: "Teer", source: require("../../assets/home-2.png") }
+    { id: 1, title: "Suits", source: require("../../assets/Men/top-1.png") },
+    { id: 2, title: "Shirts", source: require("../../assets/Men/top-2.png") },
+    { id: 3, title: "Teer", source: require("../../assets/Men/top-3.png") }
   ]);
 
   return (

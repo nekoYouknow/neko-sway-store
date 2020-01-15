@@ -10,9 +10,9 @@ import {
 
 export default function FootWear() {
   const [list, setList] = useState([
-    { id: 1, title: "Boy", source: require("../../assets/home-3.png") },
-    { id: 2, title: "Girl", source: require("../../assets/home-3.png") },
-    { id: 3, title: "Child", source: require("../../assets/home-3.png") }
+    { id: 1, title: "Boy", source: require("../../assets/Men/foot-1.png") },
+    { id: 2, title: "Girl", source: require("../../assets/Men/foot-2.png") },
+    { id: 3, title: "Child", source: require("../../assets/Men/foot-3.png") }
   ]);
 
   return (
@@ -26,7 +26,7 @@ export default function FootWear() {
         }}
       >
         <View style={{ flex: 1 }}>
-          <Text>Topwear</Text>
+          <Text>Footwear</Text>
         </View>
         <View>
           <TouchableOpacity>

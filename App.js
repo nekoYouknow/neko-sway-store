@@ -6,6 +6,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 import Home from "./screens/home";
 import Cart from "./screens/cart";
+// import Cart from "./screens/detail";
 import WishList from "./screens/wishList";
 import Account from "./screens/account";
 

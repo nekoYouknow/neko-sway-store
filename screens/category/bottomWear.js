@@ -10,9 +10,17 @@ import {
 
 export default function BottomWear() {
   const [list, setList] = useState([
-    { id: 1, title: "Trousers", source: require("../../assets/home-1.png") },
-    { id: 2, title: "Shorts", source: require("../../assets/home-1.png") },
-    { id: 3, title: "Denim", source: require("../../assets/home-1.png") }
+    {
+      id: 1,
+      title: "Trousers",
+      source: require("../../assets/Men/bottom-1.png")
+    },
+    {
+      id: 2,
+      title: "Shorts",
+      source: require("../../assets/Men/bottom-2.png")
+    },
+    { id: 3, title: "Denim", source: require("../../assets/Men/bottom-3.png") }
   ]);
 
   return (
@@ -26,7 +34,7 @@ export default function BottomWear() {
         }}
       >
         <View style={{ flex: 1 }}>
-          <Text>Topwear</Text>
+          <Text>Bottomwear</Text>
         </View>
         <View>
           <TouchableOpacity>

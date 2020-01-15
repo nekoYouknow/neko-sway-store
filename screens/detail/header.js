@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons, AntDesign, Feather } from "@expo/vector-icons";
 
 export default function Header() {
   return (
@@ -10,12 +10,13 @@ export default function Header() {
           <Ionicons name="ios-arrow-back" size={30} color="#2D2D2D" />
         </TouchableOpacity>
       </View>
-      <View style={{ flex: 1 }}>
-        <Text style={{ fontSize: 18, textAlign: "center" }}>Men</Text>
-      </View>
-      <View>
-        <TouchableOpacity>
-          <Ionicons name="ios-search" size={30} color="#2D2D2D" />
+      <View style={{ flex: 1 }}></View>
+      <View style={{ flexDirection: "row" }}>
+        <TouchableOpacity style={{ marginHorizontal: 10 }}>
+          <AntDesign name="upload" size={30} color="#2D2D2D" />
+        </TouchableOpacity>
+        <TouchableOpacity style={{ marginHorizontal: 10 }}>
+          <Feather name="shopping-bag" size={30} color="#2D2D2D" />
         </TouchableOpacity>
       </View>
     </View>
