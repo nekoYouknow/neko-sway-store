@@ -7,7 +7,7 @@ import {
   TouchableOpacity
 } from "react-native";
 
-export default function Banner() {
+export default function Banner({ navigation }) {
   return (
     <View>
       {/* <Image source={require("../../assets/home-banner.png")} /> */}
@@ -32,6 +32,7 @@ export default function Banner() {
               width: 120,
               padding: 7
             }}
+            onPress={() => navigation.navigate("Product")}
           >
             <View
               style={{

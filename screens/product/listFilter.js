@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     // backgroundColor: "yellow",
-    height: 45
+    height: 45,
+    paddingHorizontal: 24
   }
 });

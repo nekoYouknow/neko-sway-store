@@ -65,6 +65,7 @@ export default function List() {
   return (
     <View style={styles.container}>
       <FlatList
+        showsVerticalScrollIndicator={false}
         style={{ flex: 1 }}
         keyExtractor={item => item.id}
         data={list}
@@ -92,7 +93,7 @@ export default function List() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
-    // backgroundColor: "pink"
+    flex: 1,
+    paddingHorizontal: 24
   }
 });

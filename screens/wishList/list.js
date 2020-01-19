@@ -8,7 +8,7 @@ import {
   Image
 } from "react-native";
 
-export default function List() {
+export default function List({ navigation }) {
   const [list, setList] = useState([
     {
       id: 1,
@@ -58,12 +58,17 @@ export default function List() {
     <View style={styles.container}>
       <FlatList
         style={{ flex: 1 }}
+        showsVerticalScrollIndicator={false}
         keyExtractor={item => item.id}
         data={list}
         numColumns={2}
         renderItem={({ item }) => (
           <View style={{ marginHorizontal: 3, marginBottom: 20 }}>
-            <Image source={item.image} />
+            <TouchableOpacity
+              onPress={() => navigation.navigate("Detail", item)}
+            >
+              <Image source={item.image} />
+            </TouchableOpacity>
             <TouchableOpacity
               style={{ position: "absolute", right: 0, margin: 10 }}
             >
@@ -80,7 +85,8 @@ export default function List() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
     // backgroundColor: "pink"
+    paddingHorizontal: 24
   }
 });

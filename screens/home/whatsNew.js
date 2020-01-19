@@ -8,7 +8,7 @@ import {
   TouchableOpacity
 } from "react-native";
 
-export default function WhatsNew(props) {
+export default function WhatsNew({ navigation }) {
   const [list, setList] = useState([
     { id: 1, title: "Woman", source: require("../../assets/home-1.png") },
     { id: 2, title: "Man", source: require("../../assets/home-2.png") },
@@ -30,7 +30,11 @@ export default function WhatsNew(props) {
           <Text>What's new</Text>
         </View>
         <View>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() =>
+              navigation.navigate("Category", { id: 0, title: "All Product" })
+            }
+          >
             <Text>View All</Text>
           </TouchableOpacity>
         </View>
@@ -38,10 +42,12 @@ export default function WhatsNew(props) {
 
       {/* scroll */}
       <View style={{ backgroundColor: "#fff", margin: 0 }}>
-        <ScrollView horizontal={true}>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           {list.map(item => (
             <View style={styles.box} key={item.id}>
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => navigation.navigate("Category", item)}
+              >
                 <ImageBackground
                   source={item.source}
                   resizeMode="cover"

@@ -8,7 +8,7 @@ import {
   ImageBackground
 } from "react-native";
 
-export default function TopWear() {
+export default function TopWear({ navigation }) {
   const [list, setList] = useState([
     { id: 1, title: "Suits", source: require("../../assets/Men/top-1.png") },
     { id: 2, title: "Shirts", source: require("../../assets/Men/top-2.png") },
@@ -37,7 +37,7 @@ export default function TopWear() {
 
       {/* scroll */}
       <View style={{ backgroundColor: "#fff", margin: 0 }}>
-        <ScrollView horizontal={true}>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           {list.map(item => (
             <View style={styles.box} key={item.id}>
               <TouchableOpacity>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Dimensions } from "react";
 import {
   StyleSheet,
   View,
@@ -10,12 +10,55 @@ import {
 
 import Header from "./header";
 
-export default function Detail() {
+export default function Detail(props) {
   return (
     <View style={styles.container}>
-      <Header />
+      <Header {...props} />
 
-      <View>
+      {/* Add Wishlit - Cart */}
+      <View
+        style={{
+          zIndex: 1,
+          position: "absolute",
+          // backgroundColor: (0, 0, 0, 10),
+          width: "100%",
+          marginTop: 500,
+          flexDirection: "row",
+          justifyContent: "center"
+          // paddingTop: 10,
+          // paddingBottom: 70
+        }}
+      >
+        <TouchableOpacity
+          style={{
+            borderWidth: 1,
+            borderColor: "#ddd",
+            borderRadius: 5,
+            paddingHorizontal: 25,
+            paddingVertical: 10,
+            marginHorizontal: 10,
+            backgroundColor: "white"
+          }}
+        >
+          <Text>Add to Wishlist</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={{
+            borderWidth: 1,
+            borderColor: "#ddd",
+            borderRadius: 5,
+            paddingHorizontal: 25,
+            paddingVertical: 10,
+            marginHorizontal: 10,
+            backgroundColor: "#f9ca24"
+          }}
+        >
+          <Text>Add to Cart</Text>
+        </TouchableOpacity>
+      </View>
+
+      <View style={{ zIndex: 0 }}>
         <ScrollView>
           {/* cut */}
           <View>
@@ -94,44 +137,6 @@ export default function Detail() {
               <Text>sfdsfdaljf;afljaldjalgjaklgjalfja lfjasdj</Text>
               <Text>sfdsfdaljf;afljaldjalgjaklgja lfjalfjasdj</Text>
             </View>
-          </View>
-
-          {/* Add Wishlit - Cart */}
-          <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "center",
-              paddingTop: 10,
-              paddingBottom: 70
-            }}
-          >
-            <TouchableOpacity
-              style={{
-                borderWidth: 1,
-                borderColor: "#ddd",
-                borderRadius: 5,
-                paddingHorizontal: 25,
-                paddingVertical: 10,
-                marginHorizontal: 10
-                // backgroundColor: "#f9ca24"
-              }}
-            >
-              <Text>Add to Wishlist</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={{
-                borderWidth: 1,
-                borderColor: "#ddd",
-                borderRadius: 5,
-                paddingHorizontal: 25,
-                paddingVertical: 10,
-                marginHorizontal: 10,
-                backgroundColor: "#f9ca24"
-              }}
-            >
-              <Text>Add to Cart</Text>
-            </TouchableOpacity>
           </View>
         </ScrollView>
       </View>

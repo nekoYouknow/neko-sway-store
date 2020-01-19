@@ -2,11 +2,11 @@ import React from "react";
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import { Ionicons, AntDesign, Feather } from "@expo/vector-icons";
 
-export default function Header() {
+export default function Header({ navigation }) {
   return (
     <View style={styles.header}>
       <View style={{ width: 20 }}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
           <Ionicons name="ios-arrow-back" size={30} color="#2D2D2D" />
         </TouchableOpacity>
       </View>

@@ -45,7 +45,7 @@ export default function BottomWear() {
 
       {/* scroll */}
       <View style={{ backgroundColor: "#fff", margin: 0 }}>
-        <ScrollView horizontal={true}>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           {list.map(item => (
             <View style={styles.box} key={item.id}>
               <TouchableOpacity>

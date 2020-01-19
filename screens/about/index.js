@@ -1,18 +1,17 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 
-export default function Cart() {
+export default function About(props) {
   return (
-    <View style={styles.container}>
-      <Text>Cart</Text>
+    <View style={sytles.about}>
+      <Text>About</Text>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
+const sytles = StyleSheet.create({
+  about: {
     flex: 1,
-    backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center"
   }

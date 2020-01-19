@@ -5,10 +5,10 @@ import Header from "./header";
 import ListFilter from "./listFilter";
 import List from "./list";
 
-export default function Product() {
+export default function Product(props) {
   return (
     <View style={styles.container}>
-      <Header />
+      <Header {...props} />
       <ListFilter />
       <List />
     </View>
@@ -18,7 +18,6 @@ export default function Product() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 24,
-    marginHorizontal: 24
+    marginTop: 24
   }
 });

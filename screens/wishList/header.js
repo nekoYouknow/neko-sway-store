@@ -2,11 +2,11 @@ import React from "react";
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-export default function Header() {
+export default function Header({ navigation }) {
   return (
     <View style={styles.header}>
       <View style={{ width: 20 }}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.openDrawer()}>
           <Ionicons name="ios-menu" size={30} color="#2D2D2D" />
         </TouchableOpacity>
       </View>
@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: "#fff",
     padding: 15,
-    flexDirection: "row"
+    flexDirection: "row",
+    paddingHorizontal: 24
   }
 });

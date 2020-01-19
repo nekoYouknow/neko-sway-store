@@ -7,7 +7,7 @@ import {
   TouchableOpacity
 } from "react-native";
 
-export default function Banner() {
+export default function Banner({ navigation }) {
   return (
     <View>
       {/* <Image source={require("../../assets/home-banner.png")} /> */}

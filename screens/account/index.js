@@ -16,7 +16,7 @@ export default function Account() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 24,
-    marginHorizontal: 24
+    marginTop: 24
+    // marginHorizontal: 24
   }
 });

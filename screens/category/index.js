@@ -8,16 +8,19 @@ import TopWear from "./topWear";
 import BottomWear from "./bottomWear";
 import FootWear from "./footWear";
 
-export default function Category() {
+export default function Category(props) {
+  // const title = navigation.getParam("title");
+  //console.log("title=", JSON.stringify(navigation.getParam("title")));
+
   return (
     <View style={styles.container}>
-      <Header />
+      <Header {...props} />
 
       <ScrollView>
-        <Banner />
-        <TopWear />
-        <BottomWear />
-        <FootWear />
+        <Banner {...props} />
+        <TopWear {...props} />
+        <BottomWear {...props} />
+        <FootWear {...props} />
       </ScrollView>
     </View>
   );

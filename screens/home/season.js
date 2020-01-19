@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
 
-export default function Season() {
+export default function Season({ navigation }) {
   return (
     <View style={styles.container}>
       {/* header */}
@@ -16,7 +16,7 @@ export default function Season() {
           <Text>Spring Summer 2020</Text>
         </View>
         <View>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("Product")}>
             <Text>View All</Text>
           </TouchableOpacity>
         </View>
@@ -24,7 +24,7 @@ export default function Season() {
 
       {/* content */}
       <View style={{ marginHorizontal: 15 }}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Product")}>
           <Image
             style={{ width: "100%" }}
             source={require("../../assets/home-summer.png")}
