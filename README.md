@@ -19,3 +19,7 @@
 ## Designed by
 
 - https://project365.design/
+
+**Cut**
+---
+![capture](./capture.PNG)
