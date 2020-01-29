@@ -16,7 +16,7 @@
 - navigation.goBack();
 - navigation.openDrawer();
 
-## Designed by
+## Design Licensed by ?
 
 - https://project365.design/
 
