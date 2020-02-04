@@ -8,6 +8,7 @@
 - yarn add react-navigation
 - expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context
 - yarn add react-navigation-stack react-navigation-tabs
+- yarn add @react-native-community/masked-view
 
 ## Etc
 
