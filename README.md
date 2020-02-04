@@ -17,10 +17,10 @@
 - navigation.goBack();
 - navigation.openDrawer();
 
-## Design Licensed by ?
+## Design Licensed
 
 - https://project365.design/
 
-**Cut**
----
+## **Cut**
+
 ![capture](./capture.PNG)
